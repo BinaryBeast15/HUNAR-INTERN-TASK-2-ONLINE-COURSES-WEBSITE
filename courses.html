@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Course Website</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>About Our Course Offerings</h1>
+        <section class="categories">
+            <h2 onclick="toggleCategories()">Course Categories</h2>
+            <div id="categories-container" class="category-cards" style="display: none;">
+                <div class="category-card" onclick="showCourses('finance')">
+                    <h3>Finance</h3>
+                </div>
+                <div class="category-card" onclick="showCourses('economy')">
+                    <h3>Economy</h3>
+                </div>
+                <div class="category-card" onclick="showCourses('history')">
+                    <h3>History</h3>
+                </div>
+                <div class="category-card" onclick="showCourses('geography')">
+                    <h3>Geography</h3>
+                </div>
+                <div class="category-card" onclick="showCourses('maths')">
+                    <h3>Maths</h3>
+                </div>
+                <div class="category-card" onclick="showCourses('reasoning')">
+                    <h3>Reasoning</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="course-container" class="courses">
+            <!-- Course cards will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Online Course Website</p>
+    </footer>
+
+    <script src="courses.js"></script>
+</body>
+</html>

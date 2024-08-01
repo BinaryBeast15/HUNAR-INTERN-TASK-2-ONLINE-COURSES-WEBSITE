@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Online Course Website</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="choice-container">
+            <div class="choice-card" onclick="showForm('register')">
+                <h2>New User</h2>
+            </div>
+            <div class="choice-card" onclick="showForm('login')">
+                <h2>Login</h2>
+            </div>
+        </div>
+        <div id="form-container">
+            <form id="register-form" class="form-card" style="display: none;" action="register_user.php" method="post">
+                <h2>Register</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <form id="login-form" class="form-card" style="display: none;" action="login_user.php" method="post">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" name="user-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Online Course Website</p>
+    </footer>
+</body>
+</html>
